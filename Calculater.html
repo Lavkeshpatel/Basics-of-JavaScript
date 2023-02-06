@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculater</h1>
+    <div>
+        <input type="text"  id="A">
+        <select  id="C">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">X</option>
+        </select>
+        <input type="text" id="B">
+        <br>
+        <button onclick="total()">Total</button>
+        <input type="text" id="D">
+    </div>
+</body>
+<script>
+    function total(){
+        var a = document.getElementById("A").value;
+        var b = document.getElementById("B").value;
+        var c = document.getElementById("C").value;
+
+        if(c =="+"){
+            var d = parseInt(a) + parseInt(b);
+        }
+        if(c =="-"){
+            var d = parseInt(a) - parseInt(b);
+        }
+        if(c =="/"){
+            var d = parseInt(a) / parseInt(b);
+        }
+        if(c =="*"){
+            var d = parseInt(a) * parseInt(b);
+        }
+       //alert(d);
+        document.getElementById("D").value = d;
+
+      
+    }
+</script>
+</html>

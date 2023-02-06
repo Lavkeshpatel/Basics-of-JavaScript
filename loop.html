@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Loop => For,While,Foreach,Switch,brak,continue</h1>
+</body>
+<script>
+   
+
+    for(var i =0;i<26;i++){
+    
+        document.write(i ); 
+       
+    }
+    for(var i =0;i<15;i++){
+        document.write(i+"<br>"); 
+    }
+    for(var i =0;i<26;i++){
+        if(i<11){
+            continue;
+        }
+        document.write(i ); 
+    }
+    var count=0; 
+    while(count<30){
+        document.write(count+"<br>");
+        count++;
+        if(count==13){
+            break;
+        }
+    }
+    var car = ['car1','car2','car3','car4'];
+
+car.forEach(myfunction);
+function myfunction(item,index,array){
+   document.write(index+'=>'+item+"<br/>");
+  array[index] = item+"6";
+
+}
+
+car.forEach(after);
+function after(item,index){
+   document.write(index+'=>'+item+"<br/>");
+}
+var i =6;
+switch(i){
+    case 0 :
+        docoument.write("i is zero");
+        break;
+    
+    case 1:
+        docoument.write("i is one");
+        break;
+    
+    case 2:
+        docoument.write("i is two");
+        break;
+    
+    case 3:
+        docoument.write("i is three");
+        break;
+    
+    case 4:
+        docoument.write("i is four");
+        break;
+    
+    default:
+    docoument.write("i is greter the 4");
+        break;
+    
+
+}
+ 
+</script>
+
+</html>

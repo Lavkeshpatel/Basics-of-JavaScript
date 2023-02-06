@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="A" style="width: 1 00px;">0</h1> 
+   <button id="btn" >Click Me</button>
+   <button onclick="stop()"  id="stop">Stop</button>
+</body>
+<script>
+    var i = 0;
+    document.getElementById('btn').addEventListener("click",counter)
+    function  counter(){
+        document.getElementById('A').innerHTML=i;
+        i++;
+
+    }
+    document.getElementById('btn').addEventListener("mouseenter",colorChange);
+    
+
+    function colorChange(){
+        document.getElementById('A').style.backgroundColor = 'red';
+    }
+    document.getElementById('btn').addEventListener("mouseenter",color1);
+    function color1(){
+        document.getElementById('A').style.color="blue";
+
+    }
+    document.getElementById('btn').addEventListener("mouseleave",colorcganeb);
+
+    function colorcganeb(){
+        document.getElementById('A').style.backgroundColor="white";
+    }
+    document.getElementById('btn').addEventListener("mouseleave",color2);
+    function color2(){
+        document.getElementById('A').style.color="black";
+    }
+    function stop(){
+        document.getElementById('btn').removeEventListener("click",counter);
+    }
+</script>
+</html>

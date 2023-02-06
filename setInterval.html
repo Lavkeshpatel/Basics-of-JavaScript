@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+   var my = setInterval(count,1);
+   var c = 0;
+   function count(){
+    my = setInterval(count,1);
+    document.getElementById('A').innerText=c;
+    c++;
+   }
+   function stop(){
+    clearInterval(my);
+   }
+</script>
+<body >
+    <h1 id="A"></h1>
+    <button  onclick="stop()">Stop</button>
+    <button  onclick="count()">Start</button>
+</body>
+</html>

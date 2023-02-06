@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body onload="watch()">
+   <h1 id="B" style="text-align: center; color: aqua;background-color:black;font-size: 100px;"></h1>
+</body>
+<script>
+   function watch(){
+    var a = new Date();
+    var b = a.getHours();
+    var c = a.getMinutes();
+    var d = a.getSeconds();
+     var f = "AM" ;
+     if(b<10){
+           
+        b = "0"+b;
+
+     }
+      if(c<10){
+           
+        c = "0"+c;
+
+     }
+     if(d<10){
+           
+           d = "0"+d;
+   
+        }
+    if(b>12){
+
+        b = b - 12;
+
+
+    }
+    if(b>12){
+        f = "PM";
+    }
+      
+    var e = b +":" +c +":" +d +" "+" "+ f;
+
+    document.getElementById("B").innerHTML= e ;
+    setTimeout(watch,1000);
+
+   }
+
+</script>
+</html>

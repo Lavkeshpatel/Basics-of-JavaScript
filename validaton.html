@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Validation</h1>
+    <input type="text" id="A" onkeyup="val(this)">
+    <div id="B"></div>
+    
+</body>
+  <script>
+   
+    function val(elem){
+        if(isNaN(elem.value)){
+            document.getElementById('B').style.color="red";
+
+            document.getElementById('B').innerText="Please Enter a vailed Number";
+           
+
+        }else{
+            document.getElementById("B").innerText="";
+            if(elem.value.length > 10){
+                document.getElementById('B').style.color="red";
+
+                document.getElementById("B").innerText= "Please Enter 10 number only";
+                
+            }else{
+                document.getElementById("B").innerText="";
+            }
+        }
+    }
+  </script>
+</html>

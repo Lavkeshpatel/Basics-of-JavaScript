@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body>
+  
+   <button onclick="remove(this)" id="A"></button>
+
+<script>
+    var person = {
+      fname : "Lavkesh",
+      lname : "Patel",
+    fullname :  function(){
+     // var fname = prompt("Enter Your First Name","");
+     // var lname = prompt("Enter Your Last Name","");
+        return this.fname + this.lname;
+ }
+};
+document.getElementById("A").innerHTML=person.fullname();
+// document.write("<h1>"+person.fullname());
+    function remove(elem){
+        elem.style.display = 'none';
+
+    }
+    function lav(){
+        document.getElementById("A").innerHTML=person.fullname();
+    }
+</script>
+
+</html>

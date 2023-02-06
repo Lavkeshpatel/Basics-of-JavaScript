@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Print The contant</h1>
+    <p id="B">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, dignissimos iure rem accusantium, aliquam quae doloremque velit praesentium omnis ducimus optio culpa eos aperiam tempore debitis nisi modi, itaque nemo.
+    Repellat assumenda eius neque nesciunt a commodi quasi! Id cum quis, odit sit quia libero quo dolores vel et delectus laboriosam excepturi? Vero beatae doloremque quibusdam eum error exercitationem possimus?
+    Dolores iusto doloremque unde minima consequuntur quisquam incidunt eius! Quod ipsa, veritatis hic quia libero ipsam enim natus? Reprehenderit quo excepturi corporis eveniet temporibus sint consequatur iure ea veritatis dolorem!
+    Officia doloremque a pariatur labore quae ratione laboriosam beatae quaerat in tempora aspernatur nisi ut soluta numquam aut perspiciatis, eveniet qui voluptates, accusamus libero laborum. Quidem praesentium dolores voluptates quam?
+    Recusandae labore dolorum vel incidunt molestias ut repellat laudantium, aliquid, modi quisquam iusto maxime? Rerum odio corrupti repellendus deleniti dolor, placeat excepturi. Consequuntur voluptatem eligendi maxime nam laudantium vel eveniet?
+    Id autem, incidunt nisi officiis quasi, vero ipsam nulla itaque inventore veritatis velit repellendus omnis eligendi ut deleniti consequatur dolore nesciunt numquam, a alias delectus corporis? Officia maxime nesciunt laudantium.</p>
+    <h1 style="text-align: center;">Print only This contant</h1>
+    <p id="A">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, expedita exercitationem cum, facilis nesciunt ab eligendi amet vel doloremque natus odit eveniet suscipit excepturi, aliquid minima quibusdam officia asperiores placeat?
+        Asperiores porro provident at, atque a, qui beatae quod dolorem officia voluptatibus voluptatem eum, voluptatum quia tempora recusandae architecto quae odit alias. Neque maiores atque velit harum dignissimos? Velit, in.
+        Omnis doloremque fugit, mollitia natus explicabo minima ad temporibus! Rerum quisquam harum modi at a odio accusantium repellat sapiente porro eos rem minima reprehenderit sequi repellendus nisi, ipsum, voluptate aperiam?
+        Sequi, incidunt? Fugit exercitationem molestias fuga nesciunt laboriosam dolores aut odit, voluptatem facilis provident, ex error expedita libero totam laborum nemo odio. At nemo qui rerum temporibus ipsam ipsum praesentium.
+        Dolore earum atque fuga magni laudantium quo assumenda voluptatem aspernatur, eligendi a minima numquam expedita quisquam sed facere fugit delectus ut? Possimus quasi a vero. Vero fugit libero amet voluptatum.
+        Neque doloremque similique rerum perspiciatis. Numquam odio voluptatem atque. Unde laborum beatae velit nesciunt quo iusto magni repudiandae, impedit praesentium repellat nobis ex accusamus rem aliquid architecto quas sint consequatur.
+        Beatae corrupti saepe, quibusdam nisi consequuntur voluptatum distinctio iste sunt libero modi. Repellat cum atque dolore. Fuga consequuntur maiores sunt nisi, officia ullam qui amet voluptatum, aut quaerat quo architecto?
+        Voluptate placeat debitis molestiae. Ut iste molestiae velit quidem quod. Ipsa quisquam soluta officia mollitia optio tempora corrupti voluptas magni quaerat? Nesciunt quod quisquam ipsum accusamus cumque vel hic incidunt.
+
+    </p>
+    <button onclick="print1()">Print Full page</button>
+    <button onclick="print2()">Print only This contant</button>
+</body>
+<script>
+    function print1(){
+        window.print();
+    }
+    function print2(){
+        var body = document.getElementsByTagName('body')[0].innerHTML ;
+     var data = document.getElementById('A').innerText ;
+      document.getElementsByTagName('body')[0].innerHTML = data;
+      
+      window.print();
+       document.getElementsByTagName('body')[0].innerHTML = body;
+    }
+</script>
+</html>

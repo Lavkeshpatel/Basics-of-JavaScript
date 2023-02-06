@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .red{
+        color: red;
+    }
+    .blue{
+        color: blue;
+    }
+  
+
+</style>
+<body>
+    <div id="A" class="red">
+        Hello Everyone
+    </div>
+ 
+    <button onclick="geta()">getAttribute</button>
+</body>
+   <script>
+   
+  
+    var a = document.getElementById("A");
+
+    function geta(){
+         var b = a.getAttribute("class");
+        
+           // document.getElementById("AB").innerHTML=a;
+           if(b ==="red"){
+              a.setAttribute("class","blue");
+        }else{
+
+            a.setAttribute("class","red");
+
+           }
+
+          
+    }
+    
+   </script>
+</html>

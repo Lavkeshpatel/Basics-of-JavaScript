@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #A{
+        width:300px;
+        height: 550px;
+       background-color: black;
+        position: relative;
+    }
+   #B{
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+</style>
+<body>
+    <div id="A">
+        <div id="B"></div>
+
+    </div><br>
+    <button onclick="move()">Start Animation</button>
+    <button onclick="back()">back Animation</button>
+  
+</body>
+<script>
+    var a = document.getElementById("B");
+    var b = 0;
+    var d = 0;
+   
+    function move(){
+   
+    var c = setInterval(animate,5);
+       
+    function animate(){
+        if(b>=250 ){
+           clearInterval(c);
+        }else{
+            b++;
+            d+=2;
+            a.style.left = b+"px";
+            a.style.top = d+"px";
+        }
+    }
+    }
+    function back(){
+      
+
+     for(var i=b;i>0;i--){
+       
+
+            a.style.left = b+"px";
+            a.style.top = d+"px";
+            b--;
+            d-=2;
+
+
+
+           
+     }
+
+
+    }
+
+
+
+</script>
+</html>

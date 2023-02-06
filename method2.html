@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Method</h1>
+    <h1 id="A"></h1>  
+    <BUTton onclick="call1()">Push</BUTton>
+    <BUTton onclick="call2()">Reverse</BUTton>
+    <BUTton onclick="call3()">Shift</BUTton>
+    <BUTton onclick="call()">pop</BUTton>
+    <BUTton onclick="call4()">Slice</BUTton>
+   
+</body>
+<script>
+   var car = ['car1','car2','car3','car4'];
+   var car2 = car;
+   document.getElementById("A").innerText= car;
+   function call(){
+        car2.pop();
+        document.getElementById("A").innerText= car;
+   }
+   function call1(){
+    var a = prompt("Enter new element","");
+    car2.push(a);
+    document.getElementById("A").innerText= car;
+   }
+   function call2(){
+
+    car2.reverse();
+    document.getElementById("A").innerText= car;
+
+   }
+   function call3(){
+    car2.shift();
+    document.getElementById("A").innerText= car;
+   }
+   function call4(){
+   var k =  car2.slice(1,9 );
+    document.getElementById("A").innerText= k;
+   }
+</script>
+</html>

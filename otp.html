@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your Otp is : <span><h1 id="A"></h1></span></h1>
+    <button onclick="otp()">Get Otp</button>
+</body>
+<script>
+ function otp(){
+    var a = Math.random();
+    var b = a * 10000;
+    var c = Math.floor(b);
+   if(c>1000){
+    if(c<=9999){
+    document.getElementById('A').innerHTML=c;
+    }else{
+        otp();
+    }
+   }else{
+    otp();
+   }
+   
+ }
+</script>
+</html>

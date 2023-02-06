@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Today Date and Time</h1>
+   <span style="display: flex;"><h1>Full Date :</h1> <h1 id="A"> </h1></span> 
+   <span style="display: flex;"><h1>Hour :</h1> <h1 id="B"> </h1></span> 
+   <span style="display: flex;"><h1>Year :</h1> <h1 id="C"> </h1></span> 
+   <span style="display: flex;"><h1>Month :</h1> <h1 id="D"> </h1></span> 
+   <span style="display: flex;"><h1>Date :</h1> <h1 id="E"> </h1></span> 
+   <span style="display: flex;"><h1>Hour:</h1> <h1 id="F"> </h1></span> 
+   <span style="display: flex;"><h1>Minute :</h1> <h1 id="G"> </h1></span> 
+   <span style="display: flex;"><h1>Second :</h1> <h1 id="H"> </h1></span> 
+   <span style="display: flex;"><h1>MiliSecond :</h1> <h1 id="I"> </h1></span> 
+   <span style="display: flex;"><h1>Time :</h1> <h1 id="J"> </h1></span> 
+   <span style="display: flex;"><h1>Weekday :</h1> <h1 id="K"> </h1></span> 
+</body>
+<script>
+    var a = new Date();
+    var b = a.getHours();
+    var c = a.getFullYear();
+    var d = a.getMonth();
+    var e = a.getDate();
+    var f = a.getHours();
+    var g = a.getMinutes();
+    var h = a.getSeconds();
+    var i = a.getMilliseconds();
+    var j = a.getTime();
+    var k = a.getDay();
+    
+    document.getElementById('A').innerHTML = a ;
+    document.getElementById('B').innerHTML = b;
+    document.getElementById('C').innerHTML = c ;
+    document.getElementById('D').innerHTML = d ;
+    document.getElementById('E').innerHTML = e;
+    document.getElementById('F').innerHTML = f ;
+    document.getElementById('G').innerHTML = g ;
+    document.getElementById('H').innerHTML = h;
+    document.getElementById('I').innerHTML = i ;
+    document.getElementById('J').innerHTML = j ;
+    document.getElementById('K').innerHTML = k ;
+   
+</script>
+</html>
