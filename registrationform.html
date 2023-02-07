@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+    #alert{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 3px;
+        color: red;
+        display: block;
+
+    }
+    #alert_cap{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 3px;
+        color: red;
+        display: block;
+    }
+    #alert_cap1{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 3px;
+        color: red;
+        display: block;
+    }
+    #alert_cap2{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 3px;
+        color: red;
+        display: block;
+
+    }
+    label{
+        font-size:25px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 5px;
+    }
+    input{
+        margin-left: 5px;
+        height: 30px;width: 260px;
+    }
+    span{
+        color: gray;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+</style> 
+<body>
+    <form action="#" method="post" onsubmit="return validate()">
+        <div style="border: 2px solid red; height: auto;width: 300px; background-color:aqua;margin-left: 500px ;margin-top: 80px;">
+            <p>
+                <h1 style="font-size: 30px;text-align: center; border: 3px solid slateblue;border-radius: 20px;background-color: aquamarine;">Registration Form</h1>
+            </p>
+            <p>
+                <label for="username">User name</label><br>
+                <input type="text" id="username" name="username" placeholder="username"  onkeyup="white(this.value)">
+               
+            </p>
+            <p>
+                <label for="password">Password</label><br>
+                <input id="password" name="password" type="password" autocomplete="off" placeholder="password" onkeyup="pass(this.value)" >
+           
+            </p>
+            <p>
+                <label for="confirm_password">Confirm Password</label><br>
+                <input type="password" id="confirm_password" name="confirm_password" onkeyup="check(this)" placeholder="confirm_password" autocomplete="off">
+                
+            </p>
+            <p>
+                <error id="alert"></error>
+                <error id="alert_cap"></error>
+                <error id="alert_cap2"></error>
+                <error id="alert_cap1"></error>
+                <span class="password_chack">8 characters</span><br>
+                <span class="password_chack">1 lower characters</span><br>
+                <span class="password_chack">1 upper characters</span><br>
+                <span class="password_chack">1 numerical characters</span><br>
+                <span class="password_chack">1 special characters</span><br>
+              
+                
+            </p>
+            <p>    
+                
+                <input type="submit" id="submit" value="SUBMIT" style="width: 100px;margin-left: 90px;background-color: rgb(10, 240, 144);color: black;font-weight: bold; border-radius: 10px;">
+            </p>
+        </div>
+
+    </form>
+</body>
+<script>
+    window.addEventListener('keyup',event=> {
+        var isCaps = event.getModifierState('CapsLock');
+       // alert(isCaps);
+        if(isCaps
+        ){
+            document.getElementById('alert_cap').innerText = "Warning ! Capslock is On";
+        }else{
+            document.getElementById('alert_cap').innerText = "";
+        }
+    })
+    function white(data){
+        
+        var isSpace = patten.test(data);
+        if(isSpace){
+            alert.innerText= "Space is not alllow In UserName ";
+
+        }else{
+            alert.innerText= ""; 
+        }
+    }
+
+</script>
+<script>
+    var patten = /\s/g;
+    var alert = document.getElementById("alert_cap2");
+    var passClass = document.getElementsByClassName('password_chack');
+    function pass(data){
+        
+        var isSpace1 = patten.test(data);
+        if(isSpace1){
+            alert.innerText= "Space is not alllow In Password";
+
+        }else{
+            alert.innerText= ""; 
+        }
+
+        const eightChar = new RegExp('(?=.{8,12})');
+        const lowerCase = new RegExp('(?=.*[a-z])');
+        const upperCase = new RegExp('(?=.*[A-Z])');
+        const number = new RegExp('(?=.*[0-9])');
+        const specialChar = new RegExp('(?=.*[!@#\$%\^&\*])');
+
+
+        if(eightChar.test(data)){
+            passClass[0].style.color = "green";
+            
+        }else{
+            passClass[0].style.color= "grey"
+        }
+        if(lowerCase.test(data)){
+            passClass[1].style.color = "green";
+            
+        }else{
+            passClass[1].style.color= "grey"
+        }
+
+        if(upperCase.test(data)){
+            passClass[2].style.color = "green";
+            
+        }else{
+            passClass[2].style.color= "grey"
+        }
+
+        if(number.test(data)){
+            passClass[3].style.color = "green";
+            
+        }else{
+            passClass[3].style.color= "grey"
+        }
+        
+        if(specialChar.test(data)){
+            passClass[4].style.color = "green";
+            
+        }else{
+            passClass[4].style.color= "grey"
+        }
+ }
+</script>
+<script>
+    
+    var a = document.getElementById("password");
+    var flag = 1;
+
+    function check(elem){
+        if(elem.value.length>0){
+            if(elem.value != a.value){
+                document.getElementById('alert').innerText="Confirm Password dose not match";
+                flag =0;
+            
+            }else{
+                document.getElementById('alert').innerText="";
+                flag=1;
+            }
+        }else{
+            document.getElementById('alert').innerText="Please Enter Confirm Password "; 
+            flag =0;
+
+        }
+        function validate(){
+            if(flag==1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        
+    }
+</script>
+
+</html>
